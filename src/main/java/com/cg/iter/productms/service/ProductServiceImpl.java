@@ -2,15 +2,17 @@ package com.cg.iter.productms.service;
 
 import java.util.List;
 import java.util.Optional;
-
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.cg.iter.productms.controller.ProductController;
 import com.cg.iter.productms.dto.ProductDTO;
 import com.cg.iter.productms.repository.ProductRepository;
 
 @Service
 public class ProductServiceImpl implements ProductService{
+	private static final Logger Logger = org.apache.log4j.Logger.getLogger(ProductController.class);
 	
 	@Autowired
 	ProductRepository productRepository;
